@@ -5,11 +5,6 @@ import Search from './Search';
 import Results from './Results';
 import Paging from './Paging';
 
-const choice1 = document.getElementById('choice1')
-const choice2 = document.getElementById('choice2')
-const choice3 = document.getElementById('choice3')
-const choice4 = document.getElementById('choice4')
-
 export default class App extends Component {
 
     
