@@ -1,0 +1,25 @@
+header {
+    background-color: rgb(223, 23, 23)
+}
+
+.header-container h1 {
+    color: white
+}
+/* 
+header {
+    background: rgb(223, 23, 23;
+    padding: 10px;
+  
+    .header-container {
+      display: flex;
+      align-items: center;
+    
+      > h1 {
+        font-size: 14pt;
+      }
+    }
+  
+    .search-container {
+      padding: 5px 0;
+    }
+  } */
