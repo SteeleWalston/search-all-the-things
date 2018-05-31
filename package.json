@@ -7,6 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "echo \"Testing coming tomorrow!\" && exit 0",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --hot --open --mode development"
   },
