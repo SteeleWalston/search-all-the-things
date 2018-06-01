@@ -43,7 +43,6 @@ export default class SearchForm extends Component {
 
     return (
       <form className={styles.search} onSubmit={this.handleSubmit}>
-        
         <label>
         Search for Amiibos: 
         <input value={current} 

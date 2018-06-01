@@ -22,14 +22,14 @@ export default class Search extends Component {
 
   componentDidMount() {
     this.searchFromQuery(this.props.location.search);
-  }
+  };
 
   componentWillReceiveProps({ location }) {
     const next = getSearch(location);
     const current = getSearch(this.props.location);
     if(current === next) return;
     this.searchFromQuery(next);
-  }
+  };
   
   searchFromQuery(query) {
     const { search: searchTerm } = queryString.parse(query);
@@ -38,12 +38,13 @@ export default class Search extends Component {
 
     search(searchTerm)
       .then((body) => {
+        console.log('BODY', body);
         this.setState({ results: body.amiibos });
       })
       .catch(error => {
         this.setState({ error });
       });
-  }
+  };
 
   handleSearch = searchTerm => {
     this.setState({ error: null });
@@ -59,7 +60,7 @@ export default class Search extends Component {
     return (
       <div>
         <SearchForm searchTerm={searchTerm} onSearch={this.handleSearch}/>
-        {error && <div>{error}</div>}
+        {error && <div>Whoops!</div>}
         {(!error && results) && <Results results={results}/>}
       </div>
     );
