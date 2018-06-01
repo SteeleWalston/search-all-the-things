@@ -22,6 +22,9 @@ export default class App extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/about" component={About}/>
                     <Route path="/search" component={Search}/>
+                    <Route path="/movies/:id" render={({ match, history }) => {
+                        return <ResultsDetail amiiboId={match.params.id} history={history}/>;}}
+                    />
                     <Redirect to="/"/>
                   </Switch>
                 </main>

@@ -54,13 +54,13 @@ export default class SearchForm extends Component {
         &nbsp;<button>Here We Go!</button>
         </label>
         <div>
-            <input type="radio" id="choice1" name="amiibo-choices" value="" onChange={this.handleOptionChange}/>
+            <input type="radio" id="choice1" name="amiibo-choices" value="amiibo/" onChange={this.handleOptionChange}/>
             <label>All Amiibo</label>
 
-            <input type="radio" id="choice2" name="amiibo-choices" value="?character=" onChange={this.handleOptionChange}/>
+            <input type="radio" id="choice2" name="amiibo-choices" value="amiibo/?character=" onChange={this.handleOptionChange}/>
             <label>By Character</label>
 
-            <input type="radio" id="choice3" name="amiibo-choices" value="?gameseries=" onChange={this.handleOptionChange}/>
+            <input type="radio" id="choice3" name="amiibo-choices" value="amiibo/?gameseries=" onChange={this.handleOptionChange}/>
             <label>By Game Series</label>
         </div>
       </form>

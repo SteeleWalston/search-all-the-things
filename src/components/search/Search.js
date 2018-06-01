@@ -39,7 +39,7 @@ export default class Search extends Component {
     search(searchTerm)
       .then((body) => {
         console.log('BODY', body);
-        this.setState({ results: body.amiibos });
+        this.setState({ results: body.amiibo });
       })
       .catch(error => {
         this.setState({ error });
