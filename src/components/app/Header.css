@@ -1,0 +1,12 @@
+header {
+    background-color: rgb(223, 23, 23)
+}
+
+header h1 {
+    color: white
+}
+
+header li {
+    color: white;
+    text-decoration: none;
+}
