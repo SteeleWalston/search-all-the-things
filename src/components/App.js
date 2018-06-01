@@ -18,10 +18,6 @@ export default class App extends Component {
         results: []
     };
 
-    handleOptions = () => {
-
-    };
-
     searchAmiibo = () => {
         const { topic, page, perPage } = this.state;
 
