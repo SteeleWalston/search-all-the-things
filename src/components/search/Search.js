@@ -60,7 +60,7 @@ export default class Search extends Component {
     return (
       <div>
         <SearchForm searchTerm={searchTerm} onSearch={this.handleSearch}/>
-        {error && <div>Whoops!</div>}
+        {error && <div>Whoops! Looks like your search isn't quite right. Check your spelling or search for something else</div>}
         {(!error && results) && <Results results={results}/>}
       </div>
     );

@@ -10,11 +10,14 @@ export default class Result extends Component {
         image: PropTypes.string,
         gameSeries: PropTypes.string,
         amiiboSeries: PropTypes.string,
+        type: PropTypes.string,
     };
 
     render() {
-        const { character, gameSeries, amiiboSeries, image } = this.props.result;
+        const { character, gameSeries, amiiboSeries, image, type } = this.props.result;
 
+        if(type === 'Card') return <li></li>;
+        if(amiiboSeries === 'Skylanders') return <li></li>;
         return (
             <li>
                 <img src={image}/>
