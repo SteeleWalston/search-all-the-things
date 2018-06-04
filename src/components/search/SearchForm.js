@@ -10,13 +10,13 @@ export default class SearchForm extends Component {
   };
 
   state = {
-    current: this.props.searchTerm || '',
+    current: '',
     prefix: ''
   };
 
   UNSAFE_componentWillReceiveProps({ searchTerm }) {
     if(searchTerm !== this.state.current) {
-      this.setState({ current: searchTerm || '' });
+      this.setState({ current: '' });
     }
   }
 
@@ -29,7 +29,10 @@ export default class SearchForm extends Component {
     this.callSearch();
   };
 
-  handleOptionChange = ({ target }) => {
+  handleOptionChange = ({ target, current }) => {
+    if(current) {
+      this.setState({ current: '' });
+    }
     this.setState({ prefix: target.value });
   };
   
