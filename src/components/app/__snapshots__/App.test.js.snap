@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App no home test 1`] = `
+<BrowserRouter>
+  <div>
+    <Header />
+    <main>
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          path="/about"
+        />
+        <Route
+          component={[Function]}
+          path="/search"
+        />
+        <Route
+          path="/results/:id"
+          render={[Function]}
+        />
+        <Redirect
+          push={false}
+          to="/"
+        />
+      </Switch>
+    </main>
+  </div>
+</BrowserRouter>
+`;
+
+exports[`App with home 1`] = `
+<BrowserRouter>
+  <div>
+    <Header />
+    <main>
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          path="/about"
+        />
+        <Route
+          component={[Function]}
+          path="/search"
+        />
+        <Route
+          path="/results/:id"
+          render={[Function]}
+        />
+        <Redirect
+          push={false}
+          to="/"
+        />
+      </Switch>
+    </main>
+  </div>
+</BrowserRouter>
+`;

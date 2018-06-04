@@ -29,7 +29,6 @@ export default class Result extends Component {
           <Link to={`/results/${amiiboId}`}>
             <img src={image}/>
             <h2>{character}</h2>
-            <p>From {gameSeries}, part of {amiiboSeries} series of amiibo</p>
           </Link>
         </li>
       );

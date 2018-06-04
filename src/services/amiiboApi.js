@@ -10,6 +10,5 @@ export function search(searchTerm) {
 
 export function getAmiibo(id) {
   const url = `${BASE_URL}amiibo/?id=${id}`;
-  console.log('GET BY ID', get(url)); //eslint-disable-line
   return get(url);
 }

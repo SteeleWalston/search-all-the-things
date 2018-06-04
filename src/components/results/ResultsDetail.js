@@ -18,7 +18,6 @@ export default class ResultsDetail extends Component {
   componentDidMount() {
     getAmiibo(this.props.amiiboId)
       .then((body) => {
-        console.log('BODY', body); //eslint-disable-line
         this.setState({ result: body.amiibo });
       });
   }

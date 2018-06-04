@@ -38,7 +38,6 @@ export default class Search extends Component {
 
     search(searchTerm)
       .then((body) => {
-        console.log('BODY', body); //eslint-disable-line
         this.setState({ results: body.amiibo });
       })
       .catch(error => {
