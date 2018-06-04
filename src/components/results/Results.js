@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Result from './Result';
-import styles from './Results.css';
+// import styles from './Results.css';
 
 export default class Results extends Component {
 

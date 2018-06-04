@@ -22,14 +22,14 @@ export default class Search extends Component {
 
   componentDidMount() {
     this.searchFromQuery(this.props.location.search);
-  };
+  }
 
-  componentWillReceiveProps({ location }) {
+  UNSAFE_componentWillReceiveProps({ location }) {
     const next = getSearch(location);
     const current = getSearch(this.props.location);
     if(current === next) return;
     this.searchFromQuery(next);
-  };
+  }
   
   searchFromQuery(query) {
     const { search: searchTerm } = queryString.parse(query);
@@ -38,13 +38,13 @@ export default class Search extends Component {
 
     search(searchTerm)
       .then((body) => {
-        console.log('BODY', body);
+        console.log('BODY', body); //eslint-disable-line
         this.setState({ results: body.amiibo });
       })
       .catch(error => {
         this.setState({ error });
       });
-  };
+  }
 
   handleSearch = searchTerm => {
     this.setState({ error: null });
@@ -60,7 +60,7 @@ export default class Search extends Component {
     return (
       <div>
         <SearchForm searchTerm={searchTerm} onSearch={this.handleSearch}/>
-        {error && <div>Whoops! Looks like your search isn't quite right. Check your spelling or search for something else</div>}
+        {error && <div>Whoops! Looks like your search is not quite right. Check your spelling or search for something else</div>}
         {(!error && results) && <Results results={results}/>}
       </div>
     );

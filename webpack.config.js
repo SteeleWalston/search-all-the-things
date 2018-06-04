@@ -13,7 +13,7 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    contentBase: `./${buildDir}`,
+    contentBase: './${buildDir}',
     historyApiFallback: true,
   },
   devtool: 'inline-source-map',
