@@ -32,12 +32,14 @@ export default class ResultsDetail extends Component {
 
     if(result === null) return null;
 
+    const { character, image, gameSeries, amiiboSeries } = result;
+
     return (
       <section className={styles['result-detail']}>
         <div className="container">
-          <h2>{result.character}</h2>
-          <img src={result.image}/>
-          <p>From {result.gameSeries}, part of {result.amiiboSeries} series of amiibo</p>
+          <h2>{character}</h2>
+          <img src={image}/>
+          <p>From {gameSeries}, part of {amiiboSeries} series of amiibo</p>
         </div>
       </section>
     );

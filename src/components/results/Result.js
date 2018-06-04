@@ -22,8 +22,8 @@ export default class Result extends Component {
 
       const amiiboId = head + tail;
 
-      if(type === 'Card') return <li></li>;
-      if(amiiboSeries === 'Skylanders') return <li></li>;
+      if(type === 'Card') return null;
+      if(amiiboSeries === 'Skylanders') return null;
       return (
         <li>
           <Link to={`/results/${amiiboId}`}>
