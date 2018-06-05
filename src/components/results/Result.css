@@ -1,0 +1,8 @@
+:local(.result) {
+  padding: 2rem;
+  h2 {
+    display: flex;
+    justify-content: center;
+    color: black
+  }
+}

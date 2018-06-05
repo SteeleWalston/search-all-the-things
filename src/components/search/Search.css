@@ -1,0 +1,8 @@
+:local(.search) {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  padding: 5rem;
+  background-color: rgb(241, 240, 240);
+
+}

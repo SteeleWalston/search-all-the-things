@@ -46,7 +46,7 @@ export default class SearchForm extends Component {
     const { current } = this.state;
 
     return (
-      <form className={styles.search} onSubmit={this.handleSubmit}>
+      <form className={styles.searchForm} onSubmit={this.handleSubmit}>
         <label>
         Search for Amiibos: 
           <input value={current} 

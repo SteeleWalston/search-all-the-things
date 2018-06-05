@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import styles from './Result.css';
+import styles from './Result.css';
 
 export default class Result extends Component {
 
@@ -25,8 +25,8 @@ export default class Result extends Component {
       if(type === 'Card') return null;
       if(amiiboSeries === 'Skylanders') return null;
       return (
-        <li>
-          <Link to={`/results/${amiiboId}`}>
+        <li className={styles.result}>
+          <Link to={`/results/${amiiboId}`} style={{ textDecoration: 'none' }}>
             <img src={image}/>
             <h2>{character}</h2>
           </Link>

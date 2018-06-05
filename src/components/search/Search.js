@@ -4,6 +4,7 @@ import SearchForm from '../search/SearchForm';
 import { search } from '../../services/amiiboApi';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import styles from './Search.css';
 
 const getSearch = location => location ? location.search : '';
 
@@ -57,7 +58,7 @@ export default class Search extends Component {
     const { results, error, searchTerm } = this.state;
 
     return (
-      <div>
+      <div className={styles.search}>
         <SearchForm searchTerm={searchTerm} onSearch={this.handleSearch}/>
         {error && <div>Whoops! Looks like your search is not quite right. Check your spelling or search for something else</div>}
         {(!error && results) && <Results results={results}/>}
