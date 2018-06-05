@@ -41,7 +41,6 @@ export default class SearchForm extends Component {
 
   render() {
     const { current, input } = this.state;
-    console.log('INPUT2', input);
 
     return (
       <form className={styles.searchForm} onSubmit={this.handleSubmit}>
