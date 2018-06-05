@@ -11,14 +11,9 @@ export default class SearchForm extends Component {
 
   state = {
     current: '',
-    prefix: ''
+    prefix: '',
+    input: ''
   };
-
-  UNSAFE_componentWillReceiveProps({ searchTerm }) {
-    if(searchTerm !== this.state.current) {
-      this.setState({ current: '' });
-    }
-  }
 
   handleChange = ({ target }) => {
     this.setState({ current: target.value });
@@ -29,10 +24,12 @@ export default class SearchForm extends Component {
     this.callSearch();
   };
 
-  handleOptionChange = ({ target, current }) => {
+  handleOptionChange = ({ target }) => {
+    const { current } = this.state;
     if(current) {
       this.setState({ current: '' });
     }
+    this.setState({ input: target.id });
     this.setState({ prefix: target.value });
   };
   
@@ -43,7 +40,8 @@ export default class SearchForm extends Component {
   }
 
   render() {
-    const { current } = this.state;
+    const { current, input } = this.state;
+    console.log('INPUT2', input);
 
     return (
       <form className={styles.searchForm} onSubmit={this.handleSubmit}>
@@ -51,20 +49,20 @@ export default class SearchForm extends Component {
         Search for Amiibos: 
           <input value={current} 
             onChange={this.handleChange} 
-            name="search" 
+            name="search" placeholder={input}
           />
         </label>
         <label>
         &nbsp;<button>Here We Go!</button>
         </label>
         <div>
-          <input type="radio" id="choice1" name="amiibo-choices" value="amiibo/" onChange={this.handleOptionChange}/>
+          <input type="radio" id="search All amiibo" name="amiibo-choices" value="amiibo/" onChange={this.handleOptionChange}/>
           <label>All Amiibo</label>
 
-          <input type="radio" id="choice2" name="amiibo-choices" value="amiibo/?character=" onChange={this.handleOptionChange}/>
+          <input type="radio" id="enter Name" name="amiibo-choices" value="amiibo/?character=" onChange={this.handleOptionChange}/>
           <label>By Character</label>
 
-          <input type="radio" id="choice3" name="amiibo-choices" value="amiibo/?gameseries=" onChange={this.handleOptionChange}/>
+          <input type="radio" id="enter Game Series" name="amiibo-choices" value="amiibo/?gameseries=" onChange={this.handleOptionChange}/>
           <label>By Game Series</label>
         </div>
       </form>

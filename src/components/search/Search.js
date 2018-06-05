@@ -56,6 +56,7 @@ export default class Search extends Component {
   
   render() {
     const { results, error, searchTerm } = this.state;
+    console.log('RESULTS', results);
 
     return (
       <div className={styles.search}>

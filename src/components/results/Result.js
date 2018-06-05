@@ -27,7 +27,7 @@ export default class Result extends Component {
       return (
         <li className={styles.result}>
           <Link to={`/results/${amiiboId}`} style={{ textDecoration: 'none' }}>
-            <img src={image}/>
+            <img src={image} width="300px"/>
             <h2>{character}</h2>
           </Link>
         </li>

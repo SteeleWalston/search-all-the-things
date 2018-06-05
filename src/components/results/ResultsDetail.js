@@ -35,10 +35,10 @@ export default class ResultsDetail extends Component {
     const { character, image, gameSeries, amiiboSeries } = result;
 
     return (
-      <section className={styles['result-detail']}>
+      <section className={styles['results-detail']}>
         <div className="container">
           <h2>{character}</h2>
-          <img src={image}/>
+          <img src={image} width="300px"/>
           <p>From {gameSeries}, part of {amiiboSeries} series of amiibo</p>
         </div>
       </section>
